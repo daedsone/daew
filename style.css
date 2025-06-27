@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Özel stiller buraya */
+.my-custom-button {
+  @apply bg-blue-500 text-white font-bold py-2 px-4 rounded; /* Tailwind sınıflarını kullan */
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #4f46e5;
+  }
+}
+
+/* Daha fazla özel stil */
+.profile-image {
+    object-fit: cover;
+}
