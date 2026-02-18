@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daevaris | Full-Stack & Security Portfolio</title>
+    <title>Daevaris | Web & Robotics Developer</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -41,30 +39,22 @@
             transform: translateY(-5px);
         }
 
-        /* Skill Bar Animasyonu */
         .skill-bar {
             height: 8px;
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
             overflow: hidden;
-            position: relative;
         }
 
         .skill-progress {
             height: 100%;
             background: var(--accent);
-            width: 0; /* JS ile dolacak */
+            width: 0;
             transition: width 1.5s ease-in-out;
             box-shadow: 0 0 15px var(--accent);
         }
-
-        .nav-blur {
-            backdrop-filter: blur(20px);
-            background: rgba(11, 15, 37, 0.8);
-        }
     </style>
 </head>
-
 <body>
 
     <div class="container mx-auto px-4 py-10 lg:px-20">
@@ -72,123 +62,102 @@
         <header class="text-center mb-16" data-aos="fade-down">
             <div class="relative inline-block group">
                 <img src="https://i.ibb.co/gbp4sq9S/625966067-17873022186511145-2133407472783318245-n.jpg"
-                    alt="Ali Civan Aydın" class="rounded-full mx-auto mb-6 w-40 h-40 object-cover border-4 border-cyan-500/50 p-1 group-hover:border-cyan-400 transition-all duration-500 shadow-[0_0_30px_rgba(0,191,255,0.3)]">
-                <div class="absolute bottom-6 right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-[#0b0f25] animate-pulse"></div>
+                    alt="Ali Civan Aydın" class="rounded-full mx-auto mb-6 w-40 h-40 object-cover border-4 border-cyan-500/50 p-1 shadow-[0_0_30px_rgba(0,191,255,0.2)]">
             </div>
             <h1 class="text-5xl font-extrabold mb-3 tracking-tight">Ali Civan <span class="text-cyan-500">Aydın</span></h1>
-            <p class="text-xl text-gray-400 font-light tracking-widest uppercase">Full Stack Developer & Cyber Security</p>
+            <p class="text-xl text-gray-400 font-light tracking-widest uppercase">Full-Stack Developer & Robotics Enthusiast</p>
         </header>
 
         <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
             <section class="glass-card p-8 lg:col-span-1" data-aos="fade-right">
                 <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-id-card mr-3"></i> Über mich
+                    <i class="fas fa-user-tag mr-3"></i> Über mich
                 </h2>
                 <p class="text-gray-400 leading-relaxed">
-                    Ich bin <span class="text-white font-semibold">Daevaris</span>, auch bekannt als Ali Civan Aydın. Meine Leidenschaft gilt der Entwicklung innovativer Softwarelösungen und der Analyse komplexer Sicherheitsarchitekturen.
+                    Ich bin <span class="text-white font-semibold">Daevaris</span>. Meine Reise begann 2021 mit der Webentwicklung. Was als Neugier startete, entwickelte sich schnell zu einer Leidenschaft für komplexe Systeme.
                 </p>
                 <p class="mt-4 text-gray-400">
-                    Ich liebe es, Systeme zu verstehen, sie zu optimieren und die Grenzen der Technik immer wieder neu zu definieren. Gründer von <span class="text-cyan-400 font-bold">Varis COMPANY</span>.
+                    Von der Erstellung von Web-APIs und Python-Bots bis hin zur Hardware-Programmierung mit Arduino und C++ – ich liebe es, Dinge von Grund auf zu bauen und Technologie greifbar zu machen.
                 </p>
-                <div class="mt-8">
-                    <a href="mailto:civanaydin13@gmail.com" class="inline-block w-full text-center bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg">
-                        Kontakt Aufnehmen
-                    </a>
-                </div>
             </section>
 
             <section class="glass-card p-8 lg:col-span-1" data-aos="fade-up">
                 <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-laptop-code mr-3"></i> Skills & Expertise
+                    <i class="fas fa-tools mr-3"></i> Tech Stack
                 </h2>
-                
                 <div class="space-y-6">
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-sm font-semibold">Web Development (Full-Stack)</span>
-                            <span class="text-sm text-cyan-500">90%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        <div class="flex justify-between mb-2"><span class="text-sm">Web Development (HTML/CSS/JS)</span><span class="text-cyan-500">95%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-sm font-semibold">Cyber Security & Pentesting</span>
-                            <span class="text-sm text-cyan-500">85%</span>
-                        </div>
+                        <div class="flex justify-between mb-2"><span class="text-sm">Python (Bots & Scripts)</span><span class="text-cyan-500">85%</span></div>
                         <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between mb-2">
-                            <span class="text-sm font-semibold">Python & Scripting</span>
-                            <span class="text-sm text-cyan-500">80%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        <div class="flex justify-between mb-2"><span class="text-sm">Arduino & C++ (Robotics)</span><span class="text-cyan-500">75%</span></div>
+                        <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
                     </div>
                 </div>
             </section>
 
             <section class="glass-card p-8 lg:col-span-1" data-aos="fade-left">
                 <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-history mr-3"></i> Werdegang
+                    <i class="fas fa-route mr-3"></i> Mein Weg
                 </h2>
                 <div class="space-y-6">
                     <div class="border-l-2 border-cyan-500/30 pl-4">
-                        <h3 class="font-bold text-lg">Innovative Developer</h3>
-                        <p class="text-sm text-cyan-500 mb-1">2023 - Heute</p>
-                        <p class="text-gray-400 text-sm italic">Entwicklung von Game-Engines und Web-Apps.</p>
+                        <h3 class="font-bold text-lg">Hardware & Robotik</h3>
+                        <p class="text-sm text-cyan-500">2024 - Heute</p>
+                        <p class="text-gray-400 text-sm">Bau eigener Roboter und Programmierung mit Arduino/C++.</p>
                     </div>
                     <div class="border-l-2 border-cyan-500/30 pl-4">
-                        <h3 class="font-bold text-lg">Cyber Security Analyst</h3>
-                        <p class="text-sm text-cyan-500 mb-1">2022 - 2023</p>
-                        <p class="text-gray-400 text-sm italic">Sicherheitsberatung und Firewallsysteme.</p>
+                        <h3 class="font-bold text-lg">Python Bot Development</h3>
+                        <p class="text-sm text-cyan-500">2022 - 2023</p>
+                        <p class="text-gray-400 text-sm">Entwicklung automatisierter Bots und API-Integrationen.</p>
+                    </div>
+                    <div class="border-l-2 border-cyan-500/30 pl-4">
+                        <h3 class="font-bold text-lg">Web-Anfänge</h3>
+                        <p class="text-sm text-cyan-500">2021</p>
+                        <p class="text-gray-400 text-sm">Erste Schritte in der Welt der Webentwicklung.</p>
                     </div>
                 </div>
             </section>
 
-            <section class="glass-card p-8 lg:col-span-2" data-aos="fade-up">
-                <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-award mr-3"></i> Meilensteine
+            <section class="glass-card p-8 lg:col-span-3" data-aos="fade-up">
+                <h2 class="text-2xl font-bold mb-8 flex items-center text-cyan-500">
+                    <i class="fas fa-project-diagram mr-3"></i> Projekt-Highlights
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-400">
-                    <div>
-                        <h3 class="text-white font-bold flex items-center mb-2">
-                            <i class="fas fa-shield-alt mr-2 text-cyan-500"></i> Corporate Security
-                        </h3>
-                        <p class="text-sm">Optimierung von Firewall-Infrastrukturen und Behebung kritischer Sicherheitslücken für Unternehmen (2023).</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
+                        <i class="fas fa-robot text-3xl text-cyan-500 mb-4"></i>
+                        <h3 class="font-bold mb-2">DIY Robotics</h3>
+                        <p class="text-sm text-gray-400">Eigenbau-Roboter gesteuert durch Arduino. Fokus auf Mechanik und C++ Logik.</p>
                     </div>
-                    <div>
-                        <h3 class="text-white font-bold flex items-center mb-2">
-                            <i class="fas fa-users mr-2 text-cyan-500"></i> Community & Brand
-                        </h3>
-                        <p class="text-sm">Aufbau einer wachsenden digitalen Community und Gründung der Varis COMPANY Marke (2021).</p>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
+                        <i class="fas fa-robot text-3xl text-cyan-500 mb-4"></i>
+                        <h3 class="font-bold mb-2">Python Bot API</h3>
+                        <p class="text-sm text-gray-400">Ein Bot-System, das Daten über APIs zieht ve vollautomatisch verarbeitet.</p>
                     </div>
-                </div>
-            </section>
-
-            <section class="glass-card p-8 lg:col-span-1" data-aos="fade-down">
-                <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-star mr-3"></i> Interessen
-                </h2>
-                <div class="grid grid-cols-3 gap-4 text-center">
-                    <div class="p-2 hover:text-cyan-400 transition cursor-default"><i class="fas fa-gamepad text-2xl mb-2"></i><p class="text-[10px] uppercase font-bold">Gaming</p></div>
-                    <div class="p-2 hover:text-cyan-400 transition cursor-default"><i class="fas fa-code text-2xl mb-2"></i><p class="text-[10px] uppercase font-bold">Coding</p></div>
-                    <div class="p-2 hover:text-cyan-400 transition cursor-default"><i class="fas fa-user-secret text-2xl mb-2"></i><p class="text-[10px] uppercase font-bold">Sec</p></div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
+                        <i class="fas fa-code text-3xl text-cyan-500 mb-4"></i>
+                        <h3 class="font-bold mb-2">Web Interfaces</h3>
+                        <p class="text-sm text-gray-400">Moderne, responsive Webseiten mit Fokus auf Performance und Design.</p>
+                    </div>
                 </div>
             </section>
 
         </main>
         
         <footer class="mt-16 text-center text-gray-600 text-sm border-t border-white/5 pt-8">
-            &copy; 2026 Daevaris Portfolio. Alle Rechte vorbehalten.
+            &copy; 2026 Ali Civan Aydın. Dokumentation meiner technologischen Reise.
         </footer>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-
-        // Senin JS'in modernize edilmiş hali (Skill barlarını doldurur)
         document.addEventListener('DOMContentLoaded', () => {
             const progressBars = document.querySelectorAll('.skill-progress');
             setTimeout(() => {
