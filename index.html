@@ -2,8 +2,8 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daevaris | Web & Robotics Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Daevaris | Web & Robotics</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
@@ -23,20 +23,22 @@
             background-color: var(--bg);
             color: #ffffff;
             background-image: radial-gradient(circle at top right, #13192f, transparent);
-            overflow-x: hidden;
+            overflow-x: hidden; /* Sağa kaymayı engeller */
         }
 
         .glass-card {
             background: var(--glass);
             backdrop-filter: blur(15px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
+            border-radius: 20px;
             transition: all 0.4s ease;
         }
 
-        .glass-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+        /* Mobil cihazlarda padding'leri azaltalım */
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 1.5rem !important;
+            }
         }
 
         .skill-bar {
@@ -55,116 +57,114 @@
         }
     </style>
 </head>
-<body>
+<body class="text-white antialiased">
 
-    <div class="container mx-auto px-4 py-10 lg:px-20">
+    <div class="container mx-auto px-4 py-8 lg:px-20 lg:py-16">
         
-        <header class="text-center mb-16" data-aos="fade-down">
+        <header class="text-center mb-12 lg:mb-20" data-aos="fade-down">
             <div class="relative inline-block group">
                 <img src="https://i.ibb.co/gbp4sq9S/625966067-17873022186511145-2133407472783318245-n.jpg"
-                    alt="Ali Civan Aydın" class="rounded-full mx-auto mb-6 w-40 h-40 object-cover border-4 border-cyan-500/50 p-1 shadow-[0_0_30px_rgba(0,191,255,0.2)]">
+                    alt="Ali Civan Aydın" class="rounded-full mx-auto mb-6 w-32 h-32 lg:w-40 lg:h-40 object-cover border-4 border-cyan-500/30 p-1 shadow-2xl">
             </div>
-            <h1 class="text-5xl font-extrabold mb-3 tracking-tight">Ali Civan <span class="text-cyan-500">Aydın</span></h1>
-            <p class="text-xl text-gray-400 font-light tracking-widest uppercase">Full-Stack Developer & Robotics Enthusiast</p>
+            <h1 class="text-3xl lg:text-5xl font-extrabold mb-3 tracking-tight">Ali Civan <span class="text-cyan-500">Aydın</span></h1>
+            <p class="text-sm lg:text-xl text-gray-400 font-light tracking-[0.2em] uppercase px-4">Full-Stack Developer & Robotics Enthusiast</p>
         </header>
 
-        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-            <section class="glass-card p-8 lg:col-span-1" data-aos="fade-right">
-                <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
-                    <i class="fas fa-user-tag mr-3"></i> Über mich
-                </h2>
-                <p class="text-gray-400 leading-relaxed">
-                    Ich bin <span class="text-white font-semibold">Daevaris</span>. Meine Reise begann 2021 mit der Webentwicklung. Was als Neugier startete, entwickelte sich schnell zu einer Leidenschaft für komplexe Systeme.
-                </p>
-                <p class="mt-4 text-gray-400">
-                    Von der Erstellung von Web-APIs und Python-Bots bis hin zur Hardware-Programmierung mit Arduino und C++ – ich liebe es, Dinge von Grund auf zu bauen und Technologie greifbar zu machen.
-                </p>
-            </section>
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
             <section class="glass-card p-8 lg:col-span-1" data-aos="fade-up">
-                <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
+                <h2 class="text-xl lg:text-2xl font-bold mb-6 flex items-center text-cyan-500">
+                    <i class="fas fa-user-tag mr-3"></i> Über mich
+                </h2>
+                <div class="text-gray-400 leading-relaxed text-sm lg:text-base space-y-4">
+                    <p>Ich bin <span class="text-white font-semibold">Daevaris</span>. Meine Reise begann 2021 mit der Webentwicklung.</p>
+                    <p>Von Python-Bots bis hin zur Hardware-Programmierung mit Arduino – ich liebe es, Technologie greifbar zu machen.</p>
+                </div>
+            </section>
+
+            <section class="glass-card p-8 lg:col-span-1" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="text-xl lg:text-2xl font-bold mb-6 flex items-center text-cyan-500">
                     <i class="fas fa-tools mr-3"></i> Tech Stack
                 </h2>
-                <div class="space-y-6">
+                <div class="space-y-5">
                     <div>
-                        <div class="flex justify-between mb-2"><span class="text-sm">Web Development (HTML/CSS/JS)</span><span class="text-cyan-500">95%</span></div>
+                        <div class="flex justify-between mb-2 text-xs lg:text-sm font-semibold"><span>Web (HTML/CSS/JS)</span><span class="text-cyan-500">95%</span></div>
                         <div class="skill-bar"><div class="skill-progress" data-width="95%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between mb-2"><span class="text-sm">Python (Bots & Scripts)</span><span class="text-cyan-500">85%</span></div>
+                        <div class="flex justify-between mb-2 text-xs lg:text-sm font-semibold"><span>Python (Bots)</span><span class="text-cyan-500">85%</span></div>
                         <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
                     </div>
                     <div>
-                        <div class="flex justify-between mb-2"><span class="text-sm">Arduino & C++ (Robotics)</span><span class="text-cyan-500">75%</span></div>
+                        <div class="flex justify-between mb-2 text-xs lg:text-sm font-semibold"><span>Arduino & C++</span><span class="text-cyan-500">75%</span></div>
                         <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
                     </div>
                 </div>
             </section>
 
-            <section class="glass-card p-8 lg:col-span-1" data-aos="fade-left">
-                <h2 class="text-2xl font-bold mb-6 flex items-center text-cyan-500">
+            <section class="glass-card p-8 lg:col-span-1" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="text-xl lg:text-2xl font-bold mb-6 flex items-center text-cyan-500">
                     <i class="fas fa-route mr-3"></i> Mein Weg
                 </h2>
                 <div class="space-y-6">
-                    <div class="border-l-2 border-cyan-500/30 pl-4">
-                        <h3 class="font-bold text-lg">Hardware & Robotik</h3>
-                        <p class="text-sm text-cyan-500">2024 - Heute</p>
-                        <p class="text-gray-400 text-sm">Bau eigener Roboter und Programmierung mit Arduino/C++.</p>
+                    <div class="border-l-2 border-cyan-500/30 pl-4 relative">
+                        <div class="absolute w-2 h-2 bg-cyan-500 rounded-full -left-[5px] top-2"></div>
+                        <h3 class="font-bold text-base lg:text-lg">Robotik</h3>
+                        <p class="text-xs text-cyan-500">2024 - Heute</p>
                     </div>
-                    <div class="border-l-2 border-cyan-500/30 pl-4">
-                        <h3 class="font-bold text-lg">Python Bot Development</h3>
-                        <p class="text-sm text-cyan-500">2022 - 2023</p>
-                        <p class="text-gray-400 text-sm">Entwicklung automatisierter Bots und API-Integrationen.</p>
+                    <div class="border-l-2 border-cyan-500/30 pl-4 relative">
+                        <div class="absolute w-2 h-2 bg-cyan-500 rounded-full -left-[5px] top-2"></div>
+                        <h3 class="font-bold text-base lg:text-lg">Python Bots</h3>
+                        <p class="text-xs text-cyan-500">2022 - 2023</p>
                     </div>
-                    <div class="border-l-2 border-cyan-500/30 pl-4">
-                        <h3 class="font-bold text-lg">Web-Anfänge</h3>
-                        <p class="text-sm text-cyan-500">2021</p>
-                        <p class="text-gray-400 text-sm">Erste Schritte in der Welt der Webentwicklung.</p>
+                    <div class="border-l-2 border-cyan-500/30 pl-4 relative">
+                        <div class="absolute w-2 h-2 bg-cyan-500 rounded-full -left-[5px] top-2"></div>
+                        <h3 class="font-bold text-base lg:text-lg">Web-Start</h3>
+                        <p class="text-xs text-cyan-500">2021</p>
                     </div>
                 </div>
             </section>
 
-            <section class="glass-card p-8 lg:col-span-3" data-aos="fade-up">
-                <h2 class="text-2xl font-bold mb-8 flex items-center text-cyan-500">
+            <section class="glass-card p-8 lg:col-span-3" data-aos="zoom-in">
+                <h2 class="text-xl lg:text-2xl font-bold mb-8 flex items-center text-cyan-500">
                     <i class="fas fa-project-diagram mr-3"></i> Projekt-Highlights
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
-                        <i class="fas fa-robot text-3xl text-cyan-500 mb-4"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500 transition-all">
+                        <i class="fas fa-robot text-2xl text-cyan-500 mb-4"></i>
                         <h3 class="font-bold mb-2">DIY Robotics</h3>
-                        <p class="text-sm text-gray-400">Eigenbau-Roboter gesteuert durch Arduino. Fokus auf Mechanik und C++ Logik.</p>
+                        <p class="text-xs text-gray-400">Arduino-gesteuerte Systeme und mechanische Konstruktionen.</p>
                     </div>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
-                        <i class="fas fa-robot text-3xl text-cyan-500 mb-4"></i>
-                        <h3 class="font-bold mb-2">Python Bot API</h3>
-                        <p class="text-sm text-gray-400">Ein Bot-System, das Daten über APIs zieht ve vollautomatisch verarbeitet.</p>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500 transition-all">
+                        <i class="fas fa-microchip text-2xl text-cyan-500 mb-4"></i>
+                        <h3 class="font-bold mb-2">Python Systems</h3>
+                        <p class="text-xs text-gray-400">Automatisierte Bots mit Fokus auf API-Effizienz.</p>
                     </div>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500/50 transition">
-                        <i class="fas fa-code text-3xl text-cyan-500 mb-4"></i>
-                        <h3 class="font-bold mb-2">Web Interfaces</h3>
-                        <p class="text-sm text-gray-400">Moderne, responsive Webseiten mit Fokus auf Performance und Design.</p>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5 hover:border-cyan-500 transition-all">
+                        <i class="fas fa-code text-2xl text-cyan-500 mb-4"></i>
+                        <h3 class="font-bold mb-2">Modern Web</h3>
+                        <p class="text-xs text-gray-400">Responsives UI/UX Design mit modernsten Frameworks.</p>
                     </div>
                 </div>
             </section>
 
         </main>
         
-        <footer class="mt-16 text-center text-gray-600 text-sm border-t border-white/5 pt-8">
-            &copy; 2026 Ali Civan Aydın. Dokumentation meiner technologischen Reise.
+        <footer class="mt-12 lg:mt-20 text-center text-gray-600 text-[10px] lg:text-xs uppercase tracking-widest pt-8 border-t border-white/5">
+            &copy; 2026 Ali Civan Aydın • Built with Passion
         </footer>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
         document.addEventListener('DOMContentLoaded', () => {
             const progressBars = document.querySelectorAll('.skill-progress');
             setTimeout(() => {
                 progressBars.forEach(bar => {
                     bar.style.width = bar.getAttribute('data-width');
                 });
-            }, 500);
+            }, 400);
         });
     </script>
 </body>
